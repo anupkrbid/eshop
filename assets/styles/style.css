@@ -1,0 +1,111 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+/* @import url("https://finesse-ui.netlify.app/src/css/finesse.css"); */
+@import url("http://localhost:3002/src/css/finesse.css");
+
+@font-face {
+  font-family: "SAMAN";
+  src: url("/assets/fonts/SAMAN.eot");
+  src: url("/assets/fonts/SAMAN.eot") format("embedded-opentype"),
+    url("/assets/fonts/SAMAN.woff2") format("woff2"),
+    url("/assets/fonts/SAMAN.woff") format("woff"),
+    url("/assets/fonts/SAMAN.ttf") format("truetype"),
+    url("/assets/fonts/SAMAN.svg#SAMAN") format("svg");
+}
+
+header {
+  border-block-end: 1px solid var(--border-color);
+}
+
+.nav-brand {
+  font-family: "SAMAN";
+  font-size: 2rem;
+}
+
+footer {
+  border-block-start: 1px solid var(--border-color);
+}
+
+.sidebar {
+  inline-size: 15rem;
+}
+
+@media screen and (min-width: 40rem) {
+  .sidebar-visible-tablet-onwards {
+    display: block;
+  }
+}
+
+custom-sidebar {
+  display: none;
+  border-inline-end: 1px solid var(--border-color);
+}
+
+.card-container-demo,
+.badge-container-demo,
+.button-container-demo,
+.responsive-image-container-demo,
+.avatar-container-demo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.grid-container-demo,
+.alert-container-demo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.list-container-demo > .list {
+  max-inline-size: 15rem;
+}
+
+.card-container-demo > .card {
+  max-inline-size: 15rem;
+}
+
+.card-container-demo > .card.card-landscape {
+  max-inline-size: 25rem;
+}
+
+.carbon-code-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.carbon-code-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#demo-modal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-16);
+  text-align: center;
+}
+
+#demo-modal .check-container {
+  color: var(--color-green-600);
+}
+
+/* div[class^="col-"] {
+  background-color: var(--color-blue-200);
+  border: 1px solid var(--color-blue-600);
+  text-align: center;
+  padding-block: var(--spacing-8);
+} */
