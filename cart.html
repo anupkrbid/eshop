@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | eshop</title>
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <script src="/assets/scripts/custom-components.js"></script>
+  </head>
+  <body>
+    <custom-header></custom-header>
+
+    <div class="container cart-container">
+      <div class="cart-products">
+        <div class="card card-landscape">
+          <img
+            class="card-img"
+            src="https://picsum.photos/500/800"
+            alt="card image"
+          />
+
+          <div class="card-description-action">
+            <div class="card-description mb-8 mi-8">
+              <h3 class="h5">Card Heading</h3>
+              <p class="h6">$ 200</p>
+              <p class="h7">20% off</p>
+              <div class="form-group">
+                <label>
+                  <span class="label">Quantity</span>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend">
+                        <i class="fas fa-plus"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="number"
+                      step="1"
+                      min="1"
+                      class="form-control"
+                      placeholder="Quantity"
+                      aria-describedby="inputGroupPrepend"
+                    />
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="inputGroupAppend">
+                        <i class="fas fa-minus"></i>
+                      </span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="card-action">
+              <button class="btn btn-primary-outlined">move to wishlist</button>
+              <button class="btn">remove from cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-amount">
+        <div class="card card-potrait card-text-only">
+          <div class="card-description-action">
+            <div class="card-description mb-8 mi-8">
+              <h2 class="h5">Price Details</h2>
+              <div class="divider"></div>
+              <div class="price-calculation">
+                <div class="d-flex justify-content-space-between">
+                  <span>Price (2 items)</span>
+                  <span>$4999</span>
+                </div>
+                <div class="d-flex justify-content-space-between">
+                  <span>Discount</span>
+                  <span>- $1999</span>
+                </div>
+                <div class="d-flex justify-content-space-between">
+                  <span>Delivery Charge</span>
+                  <span> $499</span>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="d-flex justify-content-space-between">
+                <h5>TOTAL AMOUNT</h5>
+                <strong> $499</strong>
+              </div>
+              <div class="divider"></div>
+              <div>You have saved $1990 on this order</div>
+              <button class="btn btn-primary is-100 mbs-8">Place Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="auth-modal" class="modal-overlay" tabindex="-1" role="dialog">
+      <div class="modal-container" role="document">
+        <h3 class="modal-header">Payment Modal</h3>
+        <div class="modal-body">
+          <div class="check-container">
+            <i class="fas fa-check-circle fa-5x"></i>
+          </div>
+          <h4>Thank You</h4>
+          <p>Your payment was successful</p>
+        </div>
+
+        <div class="modal-actions">
+          <button
+            class="btn btn-primary"
+            onclick="enigma.closeModal('#auth-modal')"
+          >
+            Okay
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://enigma-ni.netlify.app/src/js/enigma.js"></script>
+    <script src="/assets/scripts/script.js"></script>
+  </body>
+</html>
