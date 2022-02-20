@@ -120,6 +120,11 @@ footer {
   gap: 1rem;
 }
 
+.cart-container .card-img {
+  max-inline-size: 20rem;
+  max-block-size: 25rem;
+}
+
 @media screen and (min-width: 64rem) {
   /* laptop and above */
   .cart-container {

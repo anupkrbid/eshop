@@ -131,7 +131,7 @@ class Header extends HTMLElement {
         <div class="nav-brand-container">
           <button
             class="btn btn-icon"
-            onclick="finesse.toggleSidebar('#sidebar')"
+            onclick="enigma.toggleSidebar('#sidebar')"
           >
             <i class="fas fa-bars"></i>
           </button>
