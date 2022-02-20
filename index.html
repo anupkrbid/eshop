@@ -10,6 +10,78 @@
   </head>
   <body>
     <custom-header></custom-header>
-    <script src="https://finesse-ui.netlify.app/src/js/finesse.js"></script>
+    <div class="carousel">
+      <figure>
+        <img src="/assets/images/banner-1.jpg" />
+        <img src="/assets/images/banner-2.jpg" />
+        <img src="/assets/images/banner-3.jpg" />
+        <img src="/assets/images/banner-4.jpg" />
+        <img src="/assets/images/banner-1.jpg" />
+      </figure>
+    </div>
+
+    <div class="container home-grid-container">
+      <div class="card card-landscape">
+        <img
+          class="card-img"
+          src="/assets/images/category-men.jpg"
+          alt="card image"
+        />
+
+        <div class="card-description-action">
+          <div class="card-description mb-8 mi-8">
+            <h3 class="h5">Card Heading</h3>
+            <p class="h6">$ 200</p>
+          </div>
+          <div class="card-action">
+            <button class="btn btn-primary-outlined">add to cart</button>
+            <button class="btn btn-primary">buy now</button>
+          </div>
+        </div>
+      </div>
+      <div class="card card-landscape">
+        <img
+          class="card-img"
+          src="/assets/images/category-women.jpg"
+          alt="card image"
+        />
+
+        <div class="card-description-action">
+          <div class="card-description mb-8 mi-8">
+            <h3 class="h5">Card Heading</h3>
+            <p class="h6">$ 200</p>
+          </div>
+          <div class="card-action">
+            <button class="btn btn-primary-outlined">add to cart</button>
+            <button class="btn btn-primary">buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="auth-modal" class="modal-overlay" tabindex="-1" role="dialog">
+      <div class="modal-container" role="document">
+        <h3 class="modal-header">Payment Modal</h3>
+        <div class="modal-body">
+          <div class="check-container">
+            <i class="fas fa-check-circle fa-5x"></i>
+          </div>
+          <h4>Thank You</h4>
+          <p>Your payment was successful</p>
+        </div>
+
+        <div class="modal-actions">
+          <button
+            class="btn btn-primary"
+            onclick="enigma.closeModal('#auth-modal')"
+          >
+            Okay
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://enigma-ni.netlify.app/src/js/enigma.js"></script>
+    <script src="/assets/scripts/script.js"></script>
   </body>
 </html>

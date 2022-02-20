@@ -15,10 +15,10 @@ class Header extends HTMLElement {
             <div class="col-4">
               <ui class="list list-inline list-items-spaced">
                 <li>
-                  <a class="nav-link" href="#"> Men </a>
+                  <a class="nav-link" href="/products.html"> Men </a>
                 </li>
                 <li>
-                  <a class="nav-link nav-link-active" href="#"> Women </a>
+                  <a class="nav-link nav-link-active" href="/products.html"> Women </a>
                 </li>
               </ui>
             </div>
@@ -45,7 +45,7 @@ class Header extends HTMLElement {
             <div class="col-4">
               <ui class="list list-inline justify-content-flex-end">
                 <li>
-                  <a class="btn btn-icon" href="#">
+                  <a class="btn btn-icon" href="/cart.html">
                     <div class="badge-container">
                       <i class="fas fa-shopping-cart fa-2x"></i>
                       <span class="badge badge-top-right">10</span>
@@ -69,19 +69,19 @@ class Header extends HTMLElement {
                         <li>
                           <a
                             class="nav-link nav-link-active"
-                            href="/docs/introduction.html"
+                            href="/wishlist.html"
                           >
-                            Documentation
+                            Wishlist
                           </a>
                         </li>
                         <li>
-                          <button class="btn btn-primary is-100">Download</button>
+                          <button class="btn btn-primary-outlined is-100">Logout</button>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <li>
-                    <button class="btn btn-primary">Join</button>
+                    <button class="btn btn-primary" onclick="enigma.openModal('#auth-modal')">Join</button>
                   </li>
                 </li>
               </ui>
@@ -108,19 +108,19 @@ class Header extends HTMLElement {
                     <li>
                       <a
                         class="nav-link nav-link-active"
-                        href="/docs/introduction.html"
+                        href="/wishlist.html"
                       >
-                        Documentation
+                        Wishlist
                       </a>
                     </li>
                     <li>
-                      <button class="btn btn-primary is-100">Download</button>
+                      <button class="btn btn-primary-oulined is-100">Logout</button>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <button class="btn btn-primary">Join</button> -->
+              <button class="btn btn-primary" onclick="enigma.openModal('#auth-modal')">Join</button> -->
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ class Header extends HTMLElement {
               </a>
             </li>
             <li>
-              <a class="btn btn-icon" href="#">
+              <a class="btn btn-icon" href="/cart.html">
                 <div class="badge-container">
                   <i class="fas fa-shopping-cart fa-2x"></i>
                   <span class="badge badge-top-right">10</span>
@@ -169,19 +169,19 @@ class Header extends HTMLElement {
                     <li>
                       <a
                         class="nav-link nav-link-active"
-                        href="/docs/introduction.html"
+                        href="/wishlist.html"
                       >
-                        Documentation
+                        Wishlist
                       </a>
                     </li>
                     <li>
-                      <button class="btn btn-primary is-100">Download</button>
+                      <button class="btn btn-primary-outlined is-100">Logout</button>
                     </li>
                   </ul>
                 </div>
               </div>
               <li>
-                <button class="btn btn-primary">Join</button>
+                <button class="btn btn-primary" onclick="enigma.openModal('#auth-modal')">Join</button>
               </li>
             </li>
           </ui> 
@@ -352,6 +352,38 @@ class Footer extends HTMLElement {
   }
 }
 
+class Card extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    const cardType = this.attributes.type.value;
+    this.innerHTML = `
+    <div class="card ${this.getCardType(cardType)}">
+      <div class="card-img">
+        <img src="https://picsum.photos/450/600" alt="card image" />
+      </div>
+      <div class="card-description-action">
+        <div class="card-description mb-8 mi-8">
+          <h3 class="h5">Card Heading</h3>
+          <p class="h6">$ 200</p>
+        </div>
+        <div class="card-action">
+          <button class="btn btn-primary-outlined">add to cart</button>
+          <button class="btn btn-primary">buy now</button>
+        </div>
+      </div>
+    </div>
+      `;
+  }
+
+  getCardType(cardType) {
+    return cardType === "landscape" ? "card-landscape" : "card-potrait";
+  }
+}
+
 customElements.define("custom-header", Header);
 customElements.define("custom-sidebar", Sidebar);
 customElements.define("custom-footer", Footer);
+customElements.define("custom-card", Card);
