@@ -18,25 +18,17 @@ header {
 .nav-brand {
   font-family: "SAMAN";
   font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 footer {
   border-block-start: 1px solid var(--border-color);
 }
 
-.sidebar {
-  inline-size: 15rem;
-}
-
-@media screen and (min-width: 40rem) {
-  .sidebar-visible-tablet-onwards {
-    display: block;
-  }
-}
-
 .home-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-items: center;
   gap: 1.5rem;
   margin-block-start: 1rem;
@@ -53,7 +45,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-16);
-  text-align: center;
 }
 
 #auth-modal .check-container {
@@ -135,6 +126,9 @@ footer {
 
 .cart-container > .cart-products {
   grid-area: "cart-products";
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .cart-container > .cart-amount {
