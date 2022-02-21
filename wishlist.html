@@ -152,23 +152,187 @@
       </div>
     </div>
 
-    <div id="auth-modal" class="modal-overlay" tabindex="-1" role="dialog">
+    <custom-footer></custom-footer>
+
+    <div
+      id="auth-modal"
+      data-sign-up
+      class="modal-overlay"
+      tabindex="-1"
+      role="dialog"
+    >
       <div class="modal-container" role="document">
-        <h3 class="modal-header">Payment Modal</h3>
+        <h3 class="modal-header text-align-center">Sign Up</h3>
         <div class="modal-body">
-          <div class="check-container">
-            <i class="fas fa-check-circle fa-5x"></i>
-          </div>
-          <h4>Thank You</h4>
-          <p>Your payment was successful</p>
+          <form novalidate>
+            <div class="form-group">
+              <label>
+                <span class="label">Name</span>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control form-control-invalid"
+                    placeholder="Name"
+                    aria-describedby="inputGroupPrepend"
+                  />
+                  <small id="helpId" class="form-help-text"
+                    >Additional info or help text goes here.</small
+                  >
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span class="label">Email</span>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control form-control-invalid"
+                    placeholder="Email"
+                    aria-describedby="inputGroupPrepend"
+                  />
+                  <small id="helpId" class="form-help-text">
+                    Additional info or help text goes here.
+                  </small>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span class="label">Password</span>
+                <div class="input-group">
+                  <button class="btn btn-icon form-control-icon">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <input
+                    type="password"
+                    class="form-control form-control-invalid"
+                    placeholder="Password"
+                    aria-describedby="inputGroupPrepend"
+                  />
+
+                  <small id="helpId" class="form-help-text">
+                    Password required.
+                  </small>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span class="label">Confirm Password</span>
+                <div class="input-group">
+                  <button class="btn btn-icon form-control-icon">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <input
+                    type="password"
+                    class="form-control form-control-invalid"
+                    placeholder="Password"
+                    aria-describedby="inputGroupPrepend"
+                  />
+
+                  <small id="helpId" class="form-help-text"
+                    >Password required.</small
+                  >
+                </div>
+              </label>
+            </div>
+
+            <button class="btn btn-primary is-100" type="button">
+              Sign Up
+            </button>
+            <button
+              class="btn btn-text is-100 text-muted"
+              type="button"
+              onclick="showSignInModal(event)"
+            >
+              Already have an account <i class="fas fa-angle-right"></i>
+            </button>
+          </form>
         </div>
 
         <div class="modal-actions">
           <button
-            class="btn btn-primary"
-            onclick="enigma.closeModal('#auth-modal')"
+            class="btn btn-primary-outlined"
+            onclick="hideAllModal(event)"
           >
-            Okay
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="auth-modal"
+      data-sign-in
+      class="modal-overlay"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-container" role="document">
+        <h3 class="modal-header text-align-center">Sign In</h3>
+        <div class="modal-body">
+          <form novalidate>
+            <div class="form-group">
+              <label>
+                <span class="label">Email</span>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control form-control-invalid"
+                    placeholder="Email"
+                    aria-describedby="inputGroupPrepend"
+                  />
+                  <small id="helpId" class="form-help-text">
+                    Additional info or help text goes here.
+                  </small>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span class="label">Password</span>
+                <div class="input-group">
+                  <button class="btn btn-icon form-control-icon" type="button">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <input
+                    type="password"
+                    class="form-control form-control-invalid"
+                    placeholder="Password"
+                    aria-describedby="inputGroupPrepend"
+                  />
+
+                  <small id="helpId" class="form-help-text">
+                    Password required.
+                  </small>
+                </div>
+              </label>
+            </div>
+
+            <button class="btn btn-primary is-100" type="button">
+              Sign In
+            </button>
+            <button
+              class="btn btn-text is-100 text-muted"
+              type="button"
+              onclick="showSignUpModal(event)"
+            >
+              Create new account <i class="fas fa-angle-right"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="modal-actions">
+          <button
+            class="btn btn-primary-outlined"
+            onclick="hideAllModal(event)"
+          >
+            Close
           </button>
         </div>
       </div>
